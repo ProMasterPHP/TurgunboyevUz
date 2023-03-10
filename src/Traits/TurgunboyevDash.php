@@ -1,6 +1,14 @@
 <?php
 namespace TurgunboyevUz;
 
+/**
+ * @author Turg'unboyev Diyorbek
+ * @license MIT license
+ * @privacy Mualliflik huquqini hurmat qiling!
+ * 
+ * Bog'lanish uchun - Telegram: @Turgunboyev_D
+*/
+
 trait TurgunboyevDash{
 	public function dashboard($admin_command){
 		$this->command = $admin_command;
@@ -176,7 +184,7 @@ trait TurgunboyevDash{
 
 	public function delUser(){
 		$bot_id = $this->getMe()->result->id;
-		$update = $this->update;
+		$update = $this->getUpdates()->update;
 
 		$from = [
 			'private'=>'users',
@@ -187,9 +195,11 @@ trait TurgunboyevDash{
 
 		if(isset($update->my_chat_member)){
 			$my = $update->my_chat_member;
+
+			$my_chat = $my->chat->id;
+			$my_type = $my->chat->type;
+
 			$my_id = $my->new_chat_member->user->id;
-			$my_chat = $my->new_chat_member->chat->id;
-			$my_type = $my->new_chat_member->chat->type;
 			$my_status = $my->new_chat_member->status;
 
 			if($my_status == "left" or $my_status == "kicked"){
