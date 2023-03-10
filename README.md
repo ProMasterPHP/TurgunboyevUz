@@ -94,5 +94,5 @@ if($text == "/start"){
 ?>
 ```
 
-#### Foydalanish uchun misollar: [Example](/examples/example.php)
+#### Foydalanish uchun misollar: [Example](/examples/)
 ## Created by: [Turgunboyev Diyorbek](https://t.me/Turgunboyev_D)
