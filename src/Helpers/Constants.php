@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * @author Turg'unboyev Diyorbek
+ * @license MIT license
+ * @privacy Mualliflik huquqini hurmat qiling!
+ * 
+ * Bog'lanish uchun - Telegram: @Turgunboyev_D
+*/
+
 define('TG_LIBRARY_VERSION',"1.0");
 
 define('TG_MESSAGE','message');
