@@ -61,3 +61,38 @@ $config = [
 $api = new API($config);
 ?>
 ```
+
+### Simple Bot
+
+```php
+<?php
+$config = [
+    'token'=>"TOKEN", //Telegram Botning tokeni
+
+    'libraryPath'=>[ //TurgunboyevUz librarysi joylashgan direktoriyalar haqidagi ma'lumot
+        'path'=>"Telegram"
+    ]
+];
+
+$api = new API($config);
+
+$update = $api->getUpdates();
+
+$chat_id = $update->ID();
+$message_id = $update->messageID();
+
+$text = $update->text();
+
+if($text == "/start"){
+    $api->sendMessage($chat_id, "Assalomu alaykum hurmatli foydalanuvchi, Telegram Botimizga xush kelibsiz!",[
+    	'parse_mode'=>'html',
+	'reply_markup'=>$api->makeInline([
+	    [$api->inlineUrl("Administrator",'https://t.me/Turgunboyev_D')]
+	])
+    ]);
+}
+?>
+```
+
+#### Foydalanish uchun misollar: [Example](/examples/example.php)
+## Created by: [Turgunboyev Diyorbek](https://t.me/Turgunboyev_D)
