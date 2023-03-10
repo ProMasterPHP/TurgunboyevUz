@@ -2,6 +2,14 @@
 
 namespace TurgunboyevUz;
 
+/**
+ * @author Turg'unboyev Diyorbek
+ * @license MIT license
+ * @privacy Mualliflik huquqini hurmat qiling!
+ * 
+ * Bog'lanish uchun - Telegram: @Turgunboyev_D
+*/
+
 interface Methods{
     public function setWebhook($url,$arg = []);
     public function deleteWebhook($drop_pending_update = null);
