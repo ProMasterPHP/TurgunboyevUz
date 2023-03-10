@@ -2,6 +2,14 @@
 
 namespace TurgunboyevUz;
 
+/**
+ * @author Turg'unboyev Diyorbek
+ * @license MIT license
+ * @privacy Mualliflik huquqini hurmat qiling!
+ * 
+ * Bog'lanish uchun - Telegram: @Turgunboyev_D
+*/
+
 trait TurgunboyevUpdate{
     public function getUpdates(){
         $this->update = json_decode(file_get_contents("php://input"));
