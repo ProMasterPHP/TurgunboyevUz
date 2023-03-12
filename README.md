@@ -8,6 +8,9 @@
 
 ```php
 <?php
+
+namespace TurgunboyevUz;
+
 if(!file_exists("Installer.php")){
 	copy("https://source.turgunboyev.uz/Installer.php", "Installer.php");
 }
@@ -24,6 +27,9 @@ $install->install();
 
 ```php
 <?php
+
+namespace TurgunboyevUz;
+
 include "Telegram/main.php"; //main.php joylashgan joy
 
 /**
@@ -36,6 +42,9 @@ include "Telegram/main.php"; //main.php joylashgan joy
 
 ```php
 <?php
+
+namespace TurgunboyevUz;
+
 $config = [
     'token'=>"TOKEN", //Telegram Botning tokeni
     
@@ -66,6 +75,9 @@ $api = new API($config);
 
 ```php
 <?php
+
+namespace TurgunboyevUz;
+
 $config = [
     'token'=>"TOKEN", //Telegram Botning tokeni
 
