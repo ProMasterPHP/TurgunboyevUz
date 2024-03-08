@@ -74,7 +74,7 @@ $keyboard = $tg->makeResize([
  * @return Array value for makeResize
 */
 
-$button = $tg->requestChat("Joylashuvni yuborish");
+$button = $tg->requestLocation("Joylashuvni yuborish");
 $keyboard = $tg->makeResize([
     [
         $button,
